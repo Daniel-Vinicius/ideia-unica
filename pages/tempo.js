@@ -6,12 +6,12 @@ function Tempo(props) {
   return (
     <div>
       <div>{dynamicDateString} (dinâmico)</div>
-      {/* <div>{props.staticDateString} (estático)</div> */}
-      <div>{props.staticDateString} (estático - com delay)</div>
+      <div>{props.staticDateString} (estático - com delay e revalidação branch main)</div>
     </div>
   )
 }
 
+// getStaticProps só executa no build ou quando bater o tempo de revalidação
 export async function getStaticProps() {
   console.log('> Passando pelo getStaticProps();');
   console.log('> Adicionando delay de 5 segundos');
