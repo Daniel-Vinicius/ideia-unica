@@ -1,9 +1,10 @@
-function tempo(request, response) {
+async function GitUser(request, response) {
   const apiSecret = process.env.USER
   const dynamicDate = new Date();
 
   const githubResponse = await fetch(`https://api.github.com/users/${apiSecret}`);
-  const githubUser = githubResponse.login;
+  const githubUser = await githubResponse.json();
+  // console.log(githubUser)
 
   response.json({
     date: dynamicDate.toGMTString(),
@@ -11,4 +12,4 @@ function tempo(request, response) {
   })
 }
 
-export default tempo;
+export default GitUser;
