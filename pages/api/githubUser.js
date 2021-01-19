@@ -6,6 +6,8 @@ async function GitUser(request, response) {
   const githubUser = await githubResponse.json();
   // console.log(githubUser)
 
+  response.setHeader('Cache-Control', 's-maxage=60', 'style-while-revalidate');
+
   response.json({
     date: dynamicDate.toGMTString(),
     githubUser: githubUser
