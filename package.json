@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/Daniel-Vinicius/ideia-unica#readme",
   "dependencies": {
-    "next": "^10.0.5",
+    "next": "^11.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   }
